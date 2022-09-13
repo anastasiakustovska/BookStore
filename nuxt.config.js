@@ -30,6 +30,8 @@ export default {
     '~/plugins/fontawesome.js',
   ],
 
+  loading: true,
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

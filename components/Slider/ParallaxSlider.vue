@@ -1,12 +1,15 @@
 <template>
   <swiper class="swiper" :options="swiperOption">
-    <div class="parallax-bg" :style="{backgroundImage: `url(${backgroundUrl})`}" slot="parallax-bg" data-swiper-parallax="-23%"></div>
-    <swiper-slide :key="$index" v-for="(slide, $index) in slides">
-      <div class="title" data-swiper-parallax="-100">{{ slide.title }}</div>
-      <div class="subtitle" data-swiper-parallax="-240">{{ slide.subtitle}}</div>
-      <div class="text" data-swiper-parallax="-360">
-        <p>{{ slide.text }}</p>
-      </div>
+    <swiper-slide
+      class="slide"
+      v-for="(slide, $index) in slides"
+      :key="$index"
+      :class="{'text-dark': !!slide.textDark, 'text-white': !slide.textDark}"
+      :style="{backgroundImage: `url(${slide.background})`}"
+    >
+      <div class="title">{{ slide.title }}</div>
+      <div class="subtitle">{{ slide.subtitle}}</div>
+      <div class="text"><p v-html="slide.text"></p></div>
     </swiper-slide>
     <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
     <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
@@ -31,8 +34,8 @@ export default {
   data() {
     return {
       swiperOption: {
+        effect: 'fade',
         speed: 600,
-        parallax: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -47,18 +50,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
+.slide {
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: left;
 }
+
 .swiper {
   width: 100%;
-  height: 380px;
+  height: 100vh;
   .swiper-slide {
     display: flex;
     flex-direction: column;

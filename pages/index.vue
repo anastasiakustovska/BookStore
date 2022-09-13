@@ -1,12 +1,9 @@
 <template>
   <div>
-    <ParallaxSlider
-      :slides="slides"
-      :background-url="'https://cdn.mos.cms.futurecdn.net/AT9Bcvo94cTMGmESvL4JCK.jpg'"
-    />
+    <ParallaxSlider :slides="slides" />
     <div class="container">
       <div class="row my-2">
-          <div class="col-md-4" v-for="book in newBooks">
+          <div class="col-md-3" v-for="book in newBooks">
             <BookCard
               :title="book.title"
               :subtitle="book.subtitle"
@@ -40,10 +37,15 @@ export default {
         {
           title: 'Titlw',
           subtitle: 'Subtitle',
-          text: '123',
+          text: '<b>BOLD TEXT</b>',
+          background: 'https://cdn.mos.cms.futurecdn.net/AT9Bcvo94cTMGmESvL4JCK.jpg',
         },
-        {},
-        {},
+        {
+          title: 'Titlwss',
+          subtitle: 'Subtitle',
+          text: '123',
+          background: 'https://swiperjs.com/demos/images/nature-4.jpg',
+        },
       ]
     };
   },

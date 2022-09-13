@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-center text-lg-start bg-primary pt-2">
+  <footer class="text-center text-lg-start text-white bg-primary pt-2">
     <section class="">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->

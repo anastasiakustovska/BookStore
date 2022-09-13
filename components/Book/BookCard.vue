@@ -7,15 +7,17 @@
     img-top
     tag="article"
     style="max-width: 20rem;"
-    class="mb-2 border-primary"
+    class="book--card mb-2 border-primary"
   >
     <b-card-text v-if="subtitle">
       {{subtitle}}
     </b-card-text>
 
-    <NuxtLink :to="`/books/${isbn13}`">
-      <b-button variant="primary"><font-awesome-icon :icon="['fas', 'fish-fins']" /></b-button>
-    </NuxtLink>
+    <template #footer>
+      <NuxtLink class="button" :to="`/books/${isbn13}`">
+        <b-button variant="primary"><font-awesome-icon :icon="['fas', 'fish-fins']" /></b-button>
+      </NuxtLink>
+    </template>
   </b-card>
 </template>
 
@@ -31,6 +33,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  .book--card {
+    height: 600px;
+  }
 </style>
