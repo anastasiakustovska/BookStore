@@ -5,8 +5,10 @@
       v-for="(slide, $index) in slides"
       :key="$index"
       :class="{'text-dark': !!slide.textDark, 'text-white': !slide.textDark}"
-      :style="{backgroundImage: `url(${slide.background})`}"
     >
+    <div class="background" v-if="slide.backgroundFile">
+      <img :src="require(`~/assets/img/${slide.backgroundFile}`)" alt="">
+    </div>
       <div class="title">{{ slide.title }}</div>
       <div class="subtitle">{{ slide.subtitle}}</div>
       <div class="text"><p v-html="slide.text"></p></div>
@@ -18,8 +20,8 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import 'swiper/css/swiper.css';
 
 export default {
   name: "ParallaxSlider",
@@ -30,6 +32,13 @@ export default {
   props: {
     backgroundUrl: String,
     slides: Array,
+  },
+  methods: {
+
+  },
+  computed: {
+
+
   },
   data() {
     return {
@@ -51,8 +60,17 @@ export default {
 
 <style lang="scss" scoped>
 .slide {
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: relative;
+  width: 100% !important;
+
+  .background {
+    position: absolute;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .swiper {
@@ -64,7 +82,6 @@ export default {
     justify-content: center;
     color: black;
     box-sizing: border-box;
-    padding: 0 80px;
     background-color: transparent;
     .title {
       margin-bottom: 20px;

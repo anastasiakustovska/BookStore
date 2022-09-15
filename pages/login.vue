@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container my-5">
     <div class="row">
       <div class="col-md-5 mx-auto">
         <div id="first">
@@ -10,8 +10,8 @@
               </div>
             </div>
               <div class="form-group">
-                <label>Email address</label>
-                <b-input class="form-control" v-model="email" placeholder="Enter username"/>
+                <label>Username</label>
+                <b-input class="form-control" v-model="username" placeholder="Enter username"/>
               </div>
               <div class="form-group">
                 <label>Password</label>
@@ -35,19 +35,25 @@
 import { mapActions } from 'vuex';
 export default {
   name: "login",
+  layout: 'index',
+
   data() {
     return {
-      email: null,
+      username: null,
       password: null,
     };
   },
 
   methods: {
     onLoginClick() {
-      const data = {username: this.email, password: this.password};
+      const data = {username: this.username, password: this.password};
 
-      this.$store.dispatch('auth/authorizeUser', data);
-      alert(123);
+      this
+        .$store
+        .dispatch('auth/authorizeUser', data)
+        .then(() => {
+          this.$router.push('/');
+        });
     },
     ...mapActions({}),
   }

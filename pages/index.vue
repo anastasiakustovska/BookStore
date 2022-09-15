@@ -35,16 +35,13 @@ export default {
     return {
       slides: [
         {
-          title: 'Titlw',
-          subtitle: 'Subtitle',
-          text: '<b>BOLD TEXT</b>',
-          background: 'https://cdn.mos.cms.futurecdn.net/AT9Bcvo94cTMGmESvL4JCK.jpg',
+          backgroundFile: "sale.jpg",
         },
         {
           title: 'Titlwss',
           subtitle: 'Subtitle',
           text: '123',
-          background: 'https://swiperjs.com/demos/images/nature-4.jpg',
+          backgroundFile: 'img.png',
         },
       ]
     };

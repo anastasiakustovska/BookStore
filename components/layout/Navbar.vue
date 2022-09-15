@@ -12,13 +12,26 @@
           </b-nav-form>
         </b-navbar-nav>
       </b-collapse>
+      <button v-if="!auth.isAuthorized">
+        Login
+      </button>
+      <div v-else>
+          {{ auth.username}}
+      </div>
     </b-navbar>
   </div>
 </template>
 
 <script>
+import { mapMutations, mapActions } from 'vuex';
+
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  computed: {
+    auth() {
+      return this.$store.state.auth;
+    }
+  },
 }
 </script>
 
