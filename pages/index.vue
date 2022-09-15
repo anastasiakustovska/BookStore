@@ -3,7 +3,7 @@
     <ParallaxSlider :slides="slides" />
     <div class="container">
       <div class="row my-2">
-          <div class="col-md-3" v-for="book in newBooks">
+          <div class="col-md-4" v-for="book in newBooks">
             <BookCard
               :title="book.title"
               :subtitle="book.subtitle"

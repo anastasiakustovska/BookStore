@@ -75,7 +75,7 @@ export default {
 
 .swiper {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   .swiper-slide {
     display: flex;
     flex-direction: column;

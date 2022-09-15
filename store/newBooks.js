@@ -12,9 +12,6 @@ export const getters = {
 
 export const mutations = {
   setBooks(state, data) {
-    console.table(data.books)
-
-
     state.books = data.books;
     state.total = data.total;
     state.error = data.error;

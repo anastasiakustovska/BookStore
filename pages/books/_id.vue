@@ -85,38 +85,23 @@
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="btn-group pull-right">
-                  <button class="btn btn-white btn-default"><i class="fa fa-star"></i> Add to wishlist</button>
-                  <button class="btn btn-white btn-default"><i class="fa fa-envelope"></i> Contact Seller</button>
+                    <b-button variant="primary" @click="onWishListButtonClick">
+                      <font-awesome-icon :icon="['fa', `${!isInWishList ? 'fa-heart' : 'fa-heart-circle-xmark'}`]" swap-opacity/>
+                    </b-button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <img :src="book.image" :alt="book.title">
-        </div>
-        <div class="col">
-          <h1>
-            {{ book.title }}
-          </h1>
-          <hr>
-
-        </div>
-        {{ book }}
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import pdf from 'vue-pdf'
+import {mapGetters} from 'vuex';
 
 export default {
-  components: {
-    pdf
-  },
   name: "Book",
   layout: 'index',
 
@@ -127,18 +112,45 @@ export default {
     }
   },
 
+  computed: {
+    auth() {
+      return this.$store.state.auth;
+    },
+
+    isInWishList() {
+      const allIds = this.getAllIds();
+
+      return allIds.includes(this.book.isbn13);
+    }
+  },
+
   methods: {
     onRatingClear() {
       this.rating = 0;
     },
+    onWishListButtonClick() {
+      !this.isInWishList ? this.onWishListAdd() : this.onWishListRemove();
+    },
+    onWishListAdd() {
+      this.$store.commit('wishList/addToList', this.book);
+    },
+    onWishListRemove() {
+      this.$store.commit('wishList/removeFromList', this.book);
+    },
+    ...mapGetters({
+      getAllIds: 'wishList/getAllItemIds',
+    })
   },
 
   mounted() {
     const {id} = this.$route.params;
 
-    this.$axios.$get('/books/' + parseInt(id)).then(response => {
-      this.book = response;
-    });
+    this
+      .$axios
+      .$get(`/books/${parseInt(id)}`)
+      .then(response => {
+        this.book = response;
+      });
 
   },
 
