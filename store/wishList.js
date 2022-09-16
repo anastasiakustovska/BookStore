@@ -8,8 +8,8 @@ export const mutations = {
   },
   removeFromList: (state, payload) => {
    state.items =  state.items.filter((book) => {
-    return book.isbn13 !== payload.isbn13;
-    });
+      return book.isbn13 !== payload.isbn13;
+   });
   }
 }
 
@@ -18,6 +18,9 @@ export const getters = {
     return state.items.map(element => {
       return element.isbn13;
     });
+  },
+  countAllItems: (state) => {
+    return state?.items?.length ?? 0;
   }
 }
 

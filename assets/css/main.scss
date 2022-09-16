@@ -48,6 +48,19 @@ $theme-colors: map-merge(
     ),
     $theme-colors
 );
-
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../../node_modules/bootstrap-vue/src/index.scss';
+body {
+  background: rgba(222, 164, 125, 0.5);
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
