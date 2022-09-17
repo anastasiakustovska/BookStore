@@ -2,6 +2,7 @@
   <div>
     <div class="container">
       <div class="row my-2">
+        <span>There is nothing here now. Please choose a book.</span>
         <div class="col-md-4" v-for="book in myWishList">
           <BookCard
             :title="book.title"

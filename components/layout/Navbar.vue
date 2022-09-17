@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="primary">
-      <NuxtLink to="/"> <b-navbar-brand>BookLy</b-navbar-brand></NuxtLink>
+      <NuxtLink to="/"> <b-navbar-brand><img src="~assets/img/catfish.png" alt=""></b-navbar-brand></NuxtLink>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
@@ -71,6 +71,14 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.navbar-brand {
+  &:hover {
+    img {
+    }
+  }
+  img {
+    height: 65px;
+  }
+}
 </style>
