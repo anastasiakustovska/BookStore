@@ -44,18 +44,6 @@
               </ul>
             </div>
             <hr/>
-            <div>
-              {{ book.authors }}
-            </div>
-            <div>
-              {{ book.language }}
-            </div>
-            <div>
-              {{ book.pages }}
-            </div>
-            <div>
-              {{ book.year }}
-            </div>
             <div class="description description-tabs">
               <div>
                 <b-card no-body>
@@ -68,9 +56,8 @@
                         <b-list-group>
                           <b-list-group-item><b>Pages:</b> {{ book.pages}}</b-list-group-item>
                           <b-list-group-item><b>Year:</b> {{ book.year}}</b-list-group-item>
-                          <b-list-group-item>Morbi leo risus</b-list-group-item>
-                          <b-list-group-item>Porta ac consectetur ac</b-list-group-item>
-                          <b-list-group-item>Vestibulum at eros</b-list-group-item>
+                          <b-list-group-item><b>Language:</b> {{ book.language }}</b-list-group-item>
+                          <b-list-group-item><b>Authors:</b> {{ book.authors }}</b-list-group-item>
                         </b-list-group>
                       </b-card-text>
                     </b-tab>
@@ -81,7 +68,7 @@
             <hr/>
             <div class="row">
               <div class="col-sm-12 col-md-6 col-lg-6">
-                <b-btn class="btn btn-success btn-lg">Add to cart ($129.54)</b-btn>
+                <b-btn class="btn btn-success btn-lg" @click="onCartClick" :class="{'disabled': !isInStock}">Add to cart ({{ book.price}})</b-btn>
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="btn-group pull-right">
@@ -100,6 +87,7 @@
 
 <script>
 import {mapGetters} from 'vuex';
+import {priceToNumber} from "@/utils/functions/price";
 
 export default {
   name: "Book",
@@ -117,6 +105,20 @@ export default {
       return this.$store.state.auth;
     },
 
+    priceAsNumber () {
+      const price = this.book.price;
+
+      if (!price) {
+        return 0.0;
+      }
+
+      return priceToNumber(price);
+    },
+
+    isInStock() {
+      return this.priceAsNumber > 0;
+    },
+
     isInWishList() {
       const allIds = this.getAllIds();
 
@@ -125,6 +127,13 @@ export default {
   },
 
   methods: {
+    onCartClick() {
+      if (!this.isInStock) {
+        return;
+      }
+
+      this.$store.commit('cart/addToCart', {book: this.book});
+    },
     onRatingClear() {
       this.rating = 0;
     },

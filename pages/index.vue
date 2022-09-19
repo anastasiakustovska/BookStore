@@ -2,6 +2,7 @@
   <div>
     <ParallaxSlider :slides="slides" />
     <div class="container">
+      <h1 class="my-3">Recent releases</h1>
       <div class="row my-2 card-deck">
           <div class="col-md-4" v-for="book in newBooks" :key="book.isbn13">
             <BookCard

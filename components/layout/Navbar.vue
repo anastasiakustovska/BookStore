@@ -13,7 +13,7 @@
           <div class="text-center">
             <b-button variant="secondary">
               <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-              <b-badge variant="light">{{ 0 }} <span class="sr-only"></span></b-badge>
+              <b-badge variant="light">{{ totalCartItems }} <span class="sr-only"></span></b-badge>
             </b-button>
             <NuxtLink to="/wishlist">
               <b-button class="btn" variant="primary">
@@ -58,6 +58,9 @@ export default {
     },
     totalWishlistItems() {
       return this.countAllWishlistItems();
+    },
+    totalCartItems() {
+      return this.countAllCartItems();
     }
   },
   methods: {
@@ -66,6 +69,7 @@ export default {
     },
     ...mapGetters({
       countAllWishlistItems: 'wishList/countAllItems',
+      countAllCartItems: 'cart/countAllItems',
     })
   },
 }
