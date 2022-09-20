@@ -7,6 +7,7 @@
     tag="article"
     style="max-width: 20rem;"
     class="mb-2 border-primary"
+    :style="{width: width}"
   >
     <NuxtLink :to="`/books/${isbn13}`">
       <div class="card-title" :title="title">{{ shortTitle }}</div>
@@ -25,10 +26,10 @@ export default {
     subtitle: String,
     isbn13: String,
     image: String,
+    width: Number,
   },
   computed: {
     shortTitle() {
-      const length = this.title.length;
 
       return this.title.slice(0, 20)+'...';
     }
@@ -38,6 +39,8 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  width: 200px;
+
   &-title {
     font-size: 20px;
   }

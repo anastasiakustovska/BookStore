@@ -1,17 +1,17 @@
 <template>
   <div>
-    <ParallaxSlider :slides="slides" />
+    <ParallaxSlider :slides="slides"/>
     <div class="container">
       <h1 class="my-3">Recent releases</h1>
-      <div class="row my-2 card-deck">
-          <div class="col-md-4" v-for="book in newBooks" :key="book.isbn13">
-            <BookCard
-              :title="book.title"
-              :subtitle="book.subtitle"
-              :isbn13="book.isbn13"
-              :image="book.image"
-            />
-          </div>
+      <div class="row my-2">
+        <div class="col-md-2" v-for="book in newBooks" :key="book.isbn13">
+          <BookCard
+            :title="book.title"
+            :subtitle="book.subtitle"
+            :isbn13="book.isbn13"
+            :image="book.image"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
 
 <script>
 
-import { mapMutations, mapActions } from 'vuex';
+import {mapMutations, mapActions} from 'vuex';
 import ParallaxSlider from "~/components/Slider/ParallaxSlider";
 import BookCard from "@/components/Book/BookCard";
 
@@ -32,7 +32,7 @@ export default {
     this.$store.dispatch('newBooks/fetchNewBooks');
   },
 
-  data()    {
+  data() {
     return {
       slides: [
         {
@@ -60,3 +60,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.row {
+  gap: 30px;
+}
+</style>
