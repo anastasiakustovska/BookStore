@@ -13,7 +13,9 @@
       <div class="card-title" :title="title">{{ shortTitle }}</div>
     </NuxtLink>
     <NuxtLink :to="`/books/${isbn13}`">
-      <b-button variant="primary"><font-awesome-icon :icon="['fas', 'fish-fins']" /></b-button>
+      <b-button variant="primary" class="w-100">
+        See more
+      </b-button>
     </NuxtLink>
   </b-card>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-center text-lg-start text-white bg-primary pt-2">
+  <footer class="text-center text-lg-start text-brown bg-primary pt-2">
     <section class="">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
@@ -24,16 +24,10 @@
               Useful links
             </h6>
             <p>
-              <a href="#!" class="text-reset">Pricing</a>
+              <a href="#!" class="text-reset">About Us</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset">Terms of use</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -41,14 +35,12 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> Ivano-Frankivsk, Ukraine</p>
+            <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
             <p>
               <i class="fas fa-envelope me-3"></i>
               ukrainebooks@.com
             </p>
             <p><i class="fas fa-phone me-3"></i> + 380 9974 84 302</p>
-            <p><i class="fas fa-print me-3"></i> + 380 6674 83 902</p>
           </div>
           <!-- Grid column -->
         </div>

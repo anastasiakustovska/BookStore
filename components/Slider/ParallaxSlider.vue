@@ -49,6 +49,7 @@ export default {
           el: '.swiper-pagination',
           clickable: true
         },
+        infinite: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'

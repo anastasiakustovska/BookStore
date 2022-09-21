@@ -12,7 +12,7 @@ $gray-900: #212529 !default;
 $black: #000 !default;
 
 // Base colors definitions
-$blue: #E0750CF7 !default;
+$blue: rgb(224, 122, 41) !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -52,13 +52,12 @@ $theme-colors: map-merge(
 @import '../../node_modules/bootstrap-vue/src/index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
-
 * {
   font-family: 'Merriweather Sans', serif !important;
 }
 
 body {
-  background: rgba(222, 164, 125, 0.5);
+  background: #DEA47D7F;
 }
 
 .list-enter-active,
@@ -70,5 +69,13 @@ body {
 .list-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+
+.footer {
+  color: #b64204;
+}
+
+.text-brown {
+  color: #6c2c02;
 }
 

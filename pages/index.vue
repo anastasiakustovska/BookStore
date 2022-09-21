@@ -3,8 +3,8 @@
     <ParallaxSlider :slides="slides"/>
     <div class="container">
       <h1 class="my-3">Recent releases</h1>
-      <div class="row my-2">
-        <div class="col-md-2" v-for="book in newBooks" :key="book.isbn13">
+      <div class="row my-2 justify-content-center">
+        <div class="col-md-2 col-sm-12" v-for="book in newBooks" :key="book.isbn13">
           <BookCard
             :title="book.title"
             :subtitle="book.subtitle"
@@ -12,6 +12,23 @@
             :image="book.image"
           />
         </div>
+      </div>
+    </div>
+    <div class="features row gap-0 border-primary justify-content-center">
+      <div class="col-md-4 col-sm-12 text-center" >
+        <font-awesome-icon icon="fa-solid fa-book" />
+        <br>
+        Bargain books up to 90% off
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+        <font-awesome-icon icon="fa-solid fa-truck" />
+        <br>
+        Free shipping on orders $35+
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+        <font-awesome-icon icon="fa-solid fa-shield-halved" />
+        <br>
+        Cover to Cover Guarantee
       </div>
     </div>
   </div>
@@ -36,13 +53,16 @@ export default {
     return {
       slides: [
         {
-          backgroundFile: "sale.jpg",
+          backgroundFile: "slide1.jpeg",
         },
         {
           title: 'Titlwss',
           subtitle: 'Subtitle',
           text: '123',
-          backgroundFile: 'img.png',
+          backgroundFile: 'sale.jpg',
+        },
+        {
+          backgroundFile: "slide2.jpeg",
         },
       ]
     };
@@ -64,5 +84,21 @@ export default {
 <style lang="scss" scoped>
 .row {
   gap: 30px;
+}
+
+.gap-0 {
+  gap: 0;
+}
+
+.features {
+  margin: auto;
+  max-width: 100%;
+  padding: 25px 0;
+  background: #e19658;
+  color: #6c2c02;
+
+  svg {
+    font-size: 40px;
+  }
 }
 </style>

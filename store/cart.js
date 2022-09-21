@@ -19,6 +19,18 @@ export const mutations = {
       state.items = items;
     }
   },
+  changeProductQuantity: (state, {isbn, quantity}) => {
+    const items = state.items;
+
+    const cartItemIdx = items.findIndex((item) => {
+      return item.isbn13 === isbn;
+    });
+
+    if (cartItemIdx >= 0) {
+      items[cartItemIdx].quantity = quantity;
+      state.items = items;
+    }
+  },
   removeFromCart: (state, payload) => {
    state.items =  state.items.filter((book) => {
       return book.isbn13 !== payload.isbn13;
