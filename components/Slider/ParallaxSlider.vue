@@ -68,6 +68,7 @@ export default {
 
   .background {
     position: absolute;
+    width: 100% !important;
     img {
       width: 100%;
     }
@@ -75,8 +76,16 @@ export default {
 }
 
 .swiper {
-  width: 100%;
-  height: 60vh;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 20vh !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 60vh;
+  }
+
   .swiper-slide {
     display: flex;
     flex-direction: column;

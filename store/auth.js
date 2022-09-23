@@ -1,9 +1,11 @@
 import {LocalStorageKeys} from "@/const/auth";
 
-export const state = () => ({
+const initialState = {
   username: null,
   isAuthorized: false,
-});
+}
+
+export const state = () => initialState;
 
 export const actions = {
   async authorizeUser({commit}, data){
@@ -11,11 +13,19 @@ export const actions = {
 
     commit('saveUser', {username});
   },
+
+  async logoutUser({commit}) {
+    commit('logout');
+  }
 }
 
 export const mutations = {
   saveUser: (state, payload) => {
     localStorage.setItem(LocalStorageKeys.accessToken, (Math.random() + 1).toString(36).substring(12))
     Object.assign(state, {...payload, isAuthorized: true});
+  },
+
+  logout: (state) => {
+    Object.assign(state, initialState);
   }
 }

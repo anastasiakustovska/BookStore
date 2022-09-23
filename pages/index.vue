@@ -2,31 +2,31 @@
   <div>
     <ParallaxSlider :slides="slides"/>
     <div class="container">
-      <h1 class="my-3">Recent releases</h1>
+      <h1 class="my-5 text-center text-primary text-uppercase">Our Books</h1>
       <div class="row my-2 justify-content-center">
-        <div class="col-md-2 col-sm-12" v-for="book in newBooks" :key="book.isbn13">
-          <BookCard
-            :title="book.title"
-            :subtitle="book.subtitle"
-            :isbn13="book.isbn13"
-            :image="book.image"
-          />
-        </div>
+        <BookCard
+          v-for="book in newBooks"
+          :title="book.title"
+          :subtitle="book.subtitle"
+          :isbn13="book.isbn13"
+          :image="book.image"
+          :price="book.price"
+        />
       </div>
     </div>
     <div class="features row gap-0 border-primary justify-content-center">
-      <div class="col-md-4 col-sm-12 text-center" >
-        <font-awesome-icon icon="fa-solid fa-book" />
+      <div class="col-md-4 col-sm-12 text-center">
+        <font-awesome-icon icon="fa-solid fa-book"/>
         <br>
         Bargain books up to 90% off
       </div>
       <div class="col-md-4 col-sm-12 text-center">
-        <font-awesome-icon icon="fa-solid fa-truck" />
+        <font-awesome-icon icon="fa-solid fa-truck"/>
         <br>
         Free shipping on orders $35+
       </div>
       <div class="col-md-4 col-sm-12 text-center">
-        <font-awesome-icon icon="fa-solid fa-shield-halved" />
+        <font-awesome-icon icon="fa-solid fa-shield-halved"/>
         <br>
         Cover to Cover Guarantee
       </div>
@@ -56,10 +56,7 @@ export default {
           backgroundFile: "slide1.jpeg",
         },
         {
-          title: 'Titlwss',
-          subtitle: 'Subtitle',
-          text: '123',
-          backgroundFile: 'sale.jpg',
+          backgroundFile: 'slide3.jpeg',
         },
         {
           backgroundFile: "slide2.jpeg",
@@ -96,6 +93,10 @@ export default {
   padding: 25px 0;
   background: #e19658;
   color: #6c2c02;
+
+  @media screen and (max-width: 768px) {
+    gap: 30px;
+  }
 
   svg {
     font-size: 40px;

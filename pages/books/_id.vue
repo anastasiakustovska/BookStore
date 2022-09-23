@@ -16,7 +16,6 @@
             <h2>
               {{ book.subtitle }}
             </h2>
-            <a href="javascript:void(0);">109 customer reviews</a>
             <b-input-group>
               <b-input-group-prepend>
                 <b-button class="bg-primary border-primary" @click="onRatingClear">Clear</b-button>
@@ -54,8 +53,8 @@
                     <b-tab title="Details">
                       <b-card-text>
                         <b-list-group>
-                          <b-list-group-item><b>Pages:</b> {{ book.pages}}</b-list-group-item>
-                          <b-list-group-item><b>Year:</b> {{ book.year}}</b-list-group-item>
+                          <b-list-group-item><b>Pages:</b> {{ book.pages }}</b-list-group-item>
+                          <b-list-group-item><b>Year:</b> {{ book.year }}</b-list-group-item>
                           <b-list-group-item><b>Language:</b> {{ book.language }}</b-list-group-item>
                           <b-list-group-item><b>Authors:</b> {{ book.authors }}</b-list-group-item>
                         </b-list-group>
@@ -68,13 +67,16 @@
             <hr/>
             <div class="row">
               <div class="col-sm-12 col-md-6 col-lg-6">
-                <b-btn class="btn btn-success btn-lg" @click="onCartClick" :class="{'disabled': !isInStock}">Add to cart ({{ book.price}})</b-btn>
+                <b-btn class="btn btn-success btn-lg" @click="onCartClick" :class="{'disabled': !isInStock}">Add to cart
+                  ({{ book.price }})
+                </b-btn>
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="btn-group pull-right">
-                    <b-button variant="primary" @click="onWishListButtonClick">
-                      <font-awesome-icon :icon="['fa', `${!isInWishList ? 'fa-heart' : 'fa-heart-circle-xmark'}`]" swap-opacity/>
-                    </b-button>
+                  <b-button variant="primary" class="btn-lg btn--wish" @click="onWishListButtonClick">
+                    <font-awesome-icon :icon="['fa', `${!isInWishList ? 'fa-heart' : 'fa-heart-circle-xmark'}`]"
+                                       swap-opacity/>
+                  </b-button>
                 </div>
               </div>
             </div>
@@ -105,7 +107,7 @@ export default {
       return this.$store.state.auth;
     },
 
-    priceAsNumber () {
+    priceAsNumber() {
       const price = this.book.price;
 
       if (!price) {
@@ -177,6 +179,9 @@ body {
   background: #eee;
 }
 
+.btn--wish {
+}
+
 .product-content {
   border: 1px solid #dfe5e9;
   margin-bottom: 20px;
@@ -193,6 +198,9 @@ body {
     min-height: 238px;
     overflow: hidden;
     position: relative;
+    @media screen and (max-width: 768px) {
+      margin-left: -20px;
+    }
   }
 
   .product-deatil {
@@ -253,6 +261,11 @@ body {
         line-height: 20px;
       }
     }
+  }
+
+  .btn-lg {
+    font-size: 15px !important;
+    margin: 5px 0;
   }
 
   .description {

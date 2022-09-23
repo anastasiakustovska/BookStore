@@ -1,3 +1,9 @@
+import {priceToNumber} from "@/utils/functions/price";
+
+const initialState = {
+  items: [],
+}
+
 export const state = () =>({
   items: [],
 });
@@ -32,9 +38,14 @@ export const mutations = {
     }
   },
   removeFromCart: (state, payload) => {
-   state.items =  state.items.filter((book) => {
-      return book.isbn13 !== payload.isbn13;
-   });
+    const {index} = payload;
+    const items = state.items.splice(index, 1);
+
+    if (items.length === 1) {
+      Object.assign(state, initialState);
+    } else {
+      state.items = items;
+    }
   }
 }
 
@@ -46,7 +57,14 @@ export const getters = {
   },
   countAllItems: (state) => {
     return state?.items?.length ?? 0;
-  }
+  },
+  countAllSum: (state) => {
+    return state.items.reduce((sum, item) => {
+      const price = Number(sum) + (priceToNumber(item.price) * Number(item.quantity) ?? 1);
+
+      return price.toFixed(2);
+    }, 0);
+  },
 }
 
 
