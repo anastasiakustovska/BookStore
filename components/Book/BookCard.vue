@@ -70,8 +70,8 @@ export default {
 
   .badge {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 5px;
+    top: 5px;
   }
 
   &-title {

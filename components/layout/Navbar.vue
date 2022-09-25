@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="primary">
       <NuxtLink to="/">
-        <b-navbar-brand><img src="~assets/img/catfish.png" alt=""></b-navbar-brand>
+        <b-navbar-brand><img src="~assets/img/fox-transparent-text.png" alt=""></b-navbar-brand>
       </NuxtLink>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
@@ -93,7 +93,7 @@ export default {
   align-items: center;
   margin-left: 25px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin-top: 20px;
     margin-left: 0;
     justify-content: center;
@@ -103,7 +103,7 @@ export default {
 
 .nav-link {
   font-size: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     text-align: center;
   }
 
@@ -121,7 +121,7 @@ export default {
 }
 
 .search {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     justify-content: center;
     margin: 20px auto auto;
   }
@@ -133,7 +133,8 @@ export default {
 
 .navbar-brand {
   img {
-    height: 65px;
+    height: 80px;
+    width: 105px;
   }
 }
 </style>

@@ -39,7 +39,7 @@ export default {
   padding: 5px 5px;
   border-radius: 40px;
   height: 40px;
-  width: 300px;
+  width: 350px;
   display: flex;
   align-items: center;
   background: #ffffff;

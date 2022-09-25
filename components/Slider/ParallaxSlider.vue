@@ -81,6 +81,11 @@ export default {
     height: 20vh !important;
   }
 
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 40vh !important;
+  }
+
   @media screen and (min-width: 768px) {
     width: 100%;
     height: 60vh;

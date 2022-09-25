@@ -8,7 +8,7 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Catfish
+              <i class="fas fa-gem me-3"></i>READ FOX
             </h6>
             <p>
               Books for all of you who love books, appreciate them and search for something interesting.
@@ -24,10 +24,14 @@
               Useful links
             </h6>
             <p>
-              <a href="#!" class="text-reset">About Us</a>
+              <NuxtLink to="/about" class="text-brown">
+                About Us
+              </NuxtLink>
             </p>
             <p>
-              <a href="#!" class="text-reset">Terms of use</a>
+              <NuxtLink to="/terms-of-use" class="text-brown">
+                Terms of use
+              </NuxtLink>
             </p>
           </div>
           <!-- Grid column -->
@@ -52,7 +56,9 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2022 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">ItBooks.com</a>
+      <NuxtLink to="/" class="text-brown">
+        <a class="text-reset fw-bold">ItBooks.com</a>
+      </NuxtLink>
     </div>
     <!-- Copyright -->
   </footer>
@@ -63,7 +69,3 @@ export default {
   name: "Footer"
 }
 </script>
-
-<style scoped>
-
-</style>

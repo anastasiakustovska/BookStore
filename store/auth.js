@@ -26,6 +26,7 @@ export const mutations = {
   },
 
   logout: (state) => {
-    Object.assign(state, initialState);
+    state.isAuthorized = false;
+    state.username = false;
   }
 }

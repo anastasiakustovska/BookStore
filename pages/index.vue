@@ -11,6 +11,7 @@
           :isbn13="book.isbn13"
           :image="book.image"
           :price="book.price"
+          :key="book.isbn13"
         />
       </div>
     </div>
