@@ -4,15 +4,15 @@
     <div class="container">
       <h1 class="my-5 text-center text-primary text-uppercase">Our Books</h1>
       <div class="row my-2 justify-content-center">
-        <BookCard
-          v-for="book in newBooks"
-          :title="book.title"
-          :subtitle="book.subtitle"
-          :isbn13="book.isbn13"
-          :image="book.image"
-          :price="book.price"
-          :key="book.isbn13"
-        />
+          <BookCard
+            v-for="book in newBooks"
+            :title="book.title"
+            :subtitle="book.subtitle"
+            :isbn13="book.isbn13"
+            :image="book.image"
+            :price="book.price"
+            :key="book.isbn13"
+          />
       </div>
     </div>
     <div class="features row gap-0 border-primary justify-content-center">
@@ -55,12 +55,15 @@ export default {
       slides: [
         {
           backgroundFile: "slide1.jpeg",
+          subtitle: '”The more that you read, the more things you will know. The more that you learn, the more places you’ll go.” ―Dr. Seuss',
         },
         {
           backgroundFile: 'slide3.jpeg',
+          subtitle: '“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.” – George R.R. Martin',
         },
         {
           backgroundFile: "slide2.jpeg",
+          subtitle: '”That’s the thing about books. They let you travel without moving your feet.” – Jhumpa Lahiri',
         },
       ]
     };

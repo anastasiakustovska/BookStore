@@ -1,5 +1,5 @@
 <template>
-  <div id="w-node-d5c1659f-6487-5f44-5611-637ea9efab4b-d4f8783a" class="home-section-wrap"><h3 id="TERMS"
+  <div class="home-section-wrap"><h3 id="TERMS"
                                                                                                class="header"><strong>TERMS
     AND CONDITIONS OF USE</strong></h3>
     <p class="paragraph-light">Last Updated: 8/11/22</p>
@@ -7,43 +7,40 @@
       CONSTITUTES YOUR AGREEMENT TO BE BOUND BY THESE TERMS AND CONDITIONS OF USE. YOU MUST BE AT LEAST EIGHTEEN (18)
       YEARS OLD TO USE THE WEBSITE OR, IF YOU ARE BETWEEN THE AGES OF THIRTEEN (13) AND EIGHTEEN (18), YOU MUST HAVE
       YOUR PARENT OR GUARDIAN’S PERMISSION TO USE THE WEBSITE AND REPRESENT AND WARRANT THAT YOU HAVE YOUR PARENT OR
-      GUARDIAN’S PERMISSION.<br><br>Bookshop.org, including all of its features and content and related or
-      commonly-owned or controlled websites (“Website”), is a service made available by Bookshop, Inc. (“Bookshop.org”),
+      GUARDIAN’S PERMISSION.<br><br>We, including all of its features and content and related or
+      commonly-owned or controlled websites (“Website”), is a service made available by Bookshop, Inc.,
       a public benefit corporation that provides independently owned booksellers, industry partners, and conscious
       consumers with a direct-to-consumer e-commerce solution competitive to that of major retailers. All content,
       information, services, text, photographs, video, audio, graphics and software ordered or provided on or through
       the Website, including but not limited to Seller Content and Website Content (each defined below) (collectively,
       “Content”) may be used solely under the following Terms and Conditions of Use and all other terms and conditions
-      or documents incorporated by reference herein, including, without limitation, Bookshop.org’s <a
+      or documents incorporated by reference herein, including, without limitation, <a
         href="https://bookshop.org/info/privacy-notice" class="link-4">Privacy Policy</a> (collectively, “Terms of
       Use”), which constitutes a legally binding agreement relating to the use of the Website and the services provided
-      therein, including the Content, between Bookshop.org and each visitor or user of the Website including, without
+      therein, including the Content, between us and each visitor or user of the Website including, without
       limitation, those who purchase products on the Website (each, a “Customer”) (collectively, “Users,” and each, a
-      “User” or “you”). <br><br>With respect to individuals, firms, corporations, limited liability companies,
-      partnerships, associations, or other entities (each, a “Person” and collectively, “Persons”) that: (i) sell
-      products on the Website through Bookshop.org’s <a href="https://bookshop.org/info/#PLATFORMSELLER">Platform Seller
-        Program</a> (each, a “Platform Seller”), or (ii) participate in Bookshop.org’s <a href="#AFFILIATEPROGRAM">Affiliate
+      “User” or “you”). Program</a> (each, a “Platform Seller”), or (ii) participate in our’s <a href="#AFFILIATEPROGRAM">Affiliate
         Program</a> (each, an “Affiliate”), in the event of a conflict between these Terms of Use and the terms and
       conditions applicable to the <a href="#PLATFORMSELLER">Platform Seller Program</a> or the <a
         href="#AFFILIATEPROGRAM">Affiliate Program</a> (each, a “Program Terms of Use” and collectively, the “Programs’
       Terms of Use”), respectively, such terms and conditions applicable to the <a href="#PLATFORMSELLER">Platform
         Seller Program</a> or the <a href="#AFFILIATEPROGRAM">Affiliate Program</a> shall respectively apply. <br><br>By
       using the Website, you are deemed to have accepted, executed, and be bound by the terms of these Terms of Use.
-      Bookshop.org may change or amend these Terms of Use at any time at its sole discretion. If Bookshop.org makes a
+      We may change or amend these Terms of Use at any time at its sole discretion. If we makes a
       material change or amendment to these Terms of Use, it will notify Users thereof by posting such changes or
       amendments on the Website, which changes or amendments will be effective automatically upon the posting thereof.
-      You agree that all agreements, notices, disclosures, and other communications Bookshop.org provides to you
+      You agree that all agreements, notices, disclosures, and other communications we provides to you
       electronically satisfy any legal requirement that such communications be in writing. <br><br>IF ANY OF THESE TERMS
       OF USE OR ANY FUTURE CHANGES ARE UNACCEPTABLE TO YOU, DO NOT USE OR CONTINUE TO USE THE WEBSITE OR THE CONTENT.
       YOUR CONTINUED USE OF THE WEBSITE OR THE CONTENT FOLLOWING THE POSTING OF ANY NOTICE OF ANY CHANGE TO THESE TERMS
       OF USE SHALL CONSTITUTE YOUR ACCEPTANCE AND AGREEMENT TO SUCH CHANGE.</p><h5 class="header"><strong>Website
       License</strong></h5>
-    <p class="paragraph-light">Bookshop.org hereby grants you a limited, non-exclusive, revocable, royalty-free,
+    <p class="paragraph-light">We hereby grants you a limited, non-exclusive, revocable, royalty-free,
       non-transferable, non-assignable, non-sublicensable right and license to access and make personal use of the
       Website and Content, including intellectual property that a Platform Seller submits or uploads onto the Website
       (collectively, “Seller Content”) of which such Platform Seller is and shall remain the sole and exclusive owner
-      subject to the licenses granted to Bookshop.org, solely permitted by the tools, products, services,
-      functionalities, and/or features of the Website, or as expressly permitted by Bookshop.org in connection with your
+      subject to the licenses granted to us, solely permitted by the tools, products, services,
+      functionalities, and/or features of the Website, or as expressly permitted by us in connection with your
       use of the Website and as provided herein, subject in all respects to these Terms of Use, and not for
       redistribution of any kind (the “License”). Unless otherwise agreed to in writing with Bookshop.org, this License
       does not include any resale or commercial use of (i) the Website or Content, (ii) Seller Content that is not your
@@ -83,7 +80,7 @@
       DMCA. Bookshop.org reserves the right to remove any Website Content or Seller Content that allegedly infringes
       another party’s copyright. Bookshop.org will terminate, in appropriate circumstances, Users who are repeat
       infringers of another party’s copyright. Notices to Bookshop.org regarding any alleged copyright infringement
-      should be directed to Bookshop.org via email at copyright@bookshop.org. This email address is only for reporting
+      should be directed to Bookshop.org via email. This email address is only for reporting
       suspected copyright infringement. Contact information for other matters is provided elsewhere in these Terms of
       Use.<br><br><strong><em>Notification of Alleged Copyright Infringement: </em></strong>If any Person believes in
       good faith that its intellectual property has been used on the Website in a way that constitutes copyright
@@ -113,8 +110,7 @@
     <p class="paragraph-light">Bookshop.org reserves the right to remove any Website Content or Seller Content that
       allegedly infringes another party’s trademark or service mark. Bookshop.org will terminate, in appropriate
       circumstances, Users who are repeat infringers of another party’s trademark or service mark. Notices to
-      Bookshop.org regarding any alleged trademark infringement should be directed to Bookshop.org via email at
-      trademark@bookshop.org. This email address is only for reporting suspected trademark infringement. Contact
+      Bookshop.org regarding any alleged trademark infringement should be directed to Bookshop.org via email. This email address is only for reporting suspected trademark infringement. Contact
       information for other matters is provided elsewhere in these Terms of Use.<br><br><strong><em>Notification of
         Alleged Trademark Infringement: </em></strong>If any Person believes in good faith that its registered trademark
       or service mark has been used on the Website in a way that constitutes trademark infringement under applicable
@@ -451,7 +447,7 @@
       date. The terms of the License granted to you herein shall apply in full to any Update.</p><h5 class="header">
       <strong>Privacy</strong></h5>
     <p class="paragraph-light">Your privacy is very important to Bookshop.org. To understand Bookshop.org’s practices,
-      please review the <a href="https://bookshop.org/info/privacy-notice">Privacy Policy</a>, which is incorporated by
+      please review the privacy policy, which is incorporated by
       reference into these Terms of Use and also governs your use of the Website. Likewise, you represent and warrant
       that you will respect the privacy, property, and data protection rights of Users.</p><h5 class="header"><strong>Children’s
       Privacy</strong></h5>
@@ -1087,5 +1083,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.home-section-wrap {
+  margin-top: 50px;
+}
 </style>

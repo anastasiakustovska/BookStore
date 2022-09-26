@@ -1,24 +1,26 @@
 <template>
-  <b-card
-    :key="isbn13"
-    :img-src="image"
-    :img-alt="title"
-    img-top
-    tag="article"
-    style="max-width: 20rem;"
-    class="mb-2 border-primary"
-    :style="{width: width}"
-  >
-    <b-badge variant="primary" :class="{'badge-danger': isOutOfStock}">{{ isOutOfStock ? 'Out of stock' : price }}</b-badge>
-    <NuxtLink :to="`/books/${isbn13}`">
-      <div class="card-title" :title="title">{{ shortTitle }}</div>
-    </NuxtLink>
-    <NuxtLink :to="`/books/${isbn13}`">
-      <b-button variant="primary" class="w-100">
-        See more
-      </b-button>
-    </NuxtLink>
-  </b-card>
+  <Transition name="fade">
+    <b-card
+      :key="isbn13"
+      :img-src="image"
+      :img-alt="title"
+      img-top
+      tag="article"
+      style="max-width: 20rem;"
+      class="mb-2 border-primary"
+      :style="{width: width}"
+    >
+      <b-badge variant="primary" :class="{'badge-danger': isOutOfStock}">{{ isOutOfStock ? 'Out of stock' : price }}</b-badge>
+      <NuxtLink :to="`/books/${isbn13}`">
+        <div class="card-title" :title="title">{{ shortTitle }}</div>
+      </NuxtLink>
+      <NuxtLink :to="`/books/${isbn13}`">
+        <b-button variant="primary" class="w-100">
+          See more
+        </b-button>
+      </NuxtLink>
+    </b-card>
+  </Transition>
 </template>
 
 <script>

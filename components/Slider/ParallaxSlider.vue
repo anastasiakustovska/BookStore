@@ -33,22 +33,18 @@ export default {
     backgroundUrl: String,
     slides: Array,
   },
-  methods: {
-
-  },
-  computed: {
-
-
-  },
   data() {
     return {
       swiperOption: {
         effect: 'fade',
-        speed: 600,
+        autoplay: true,
+        speed: 500,
         pagination: {
           el: '.swiper-pagination',
-          clickable: true
+          clickable: true,
+          infinite: true,
         },
+        repeat: true,
         infinite: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -76,11 +72,6 @@ export default {
 }
 
 .swiper {
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: 20vh !important;
-  }
-
   @media screen and (max-width: 1024px) {
     width: 100%;
     height: 40vh !important;
@@ -89,6 +80,11 @@ export default {
   @media screen and (min-width: 768px) {
     width: 100%;
     height: 60vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 20vh !important;
   }
 
   .swiper-slide {
@@ -104,8 +100,17 @@ export default {
       font-weight: bold;
     }
     .subtitle {
-      margin-bottom: 20px;
-      font-size: 16px * 2;
+      letter-spacing: 3px;
+      font-size: 24px;
+      left: 40px;
+      margin: auto;
+      max-width: 620px;
+      z-index: 100;
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+        max-width: 200px;
+      }
     }
     .text {
       max-width: 430px;
